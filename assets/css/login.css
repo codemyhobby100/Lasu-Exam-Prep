@@ -168,6 +168,11 @@ img{
   text-align: center;
   border-radius: .5rem;
   transition: .3s;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .login__button:hover{
@@ -188,7 +193,6 @@ img{
   font-size: 14px;
   font-weight: 700;
 }
-
 .home_link{
   color: var(--first-color);
 }
