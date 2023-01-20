@@ -172,6 +172,7 @@ img{
   border: none;
   font-size: 14px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .login__button:hover{

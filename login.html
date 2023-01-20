@@ -120,8 +120,9 @@
       import {
         getAuth,
         createUserWithEmailAndPassword,
+        signInWithEmailAndPassword
       } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
-      import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+      import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
 
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
@@ -143,28 +144,60 @@
       const database = getDatabase(app);
 
       let form = document.getElementById("login-up");
+
+      let login = document.getElementById("login-in")
       
 
 
 
-      form.addEventListener("submit", (e) => {
+      // form.addEventListener("submit", (e) => {
+      //   e.preventDefault();
+      //   let email = document.getElementById("email").value;
+      //   let password = document.getElementById("passwordUp").value;
+      //   let username = document.getElementById("usernameUp").value;
+
+
+      //   createUserWithEmailAndPassword(auth, email, password)
+      //     .then((userCredential) => {
+      //       // Signed in
+      //       const user = userCredential.user;
+
+      //       let dt = new Date();
+
+      //       set(ref(database, 'users/' + user.uid),{
+      //           email: email,
+      //         username: username,
+      //         last_login: dt
+      //       })
+      //       // ...
+      //       alert('User signed in')
+      //     })
+      //     .catch((error) => {
+      //       const errorCode = error.code;
+      //       const errorMessage = error.message;
+      //       // ..
+      //       alert(errorMessage);
+      //     });
+
+      // });
+
+      login.addEventListener("submit", (e) => {
         e.preventDefault();
-        let email = document.getElementById("email").value;
-        let password = document.getElementById("passwordUp").value;
-        let username = document.getElementById("usernameUp").value;
+        let password = document.getElementById("password").value;
+        let email = document.getElementById("username").value;
 
 
-        createUserWithEmailAndPassword(auth, email, password)
+        signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
 
-            set(ref(database, 'users/' + user.uid),{
-                email: email,
-              username: username,
-              last_login: Date.now()
+            let dt = new Date()
+            update(ref(database, 'users/' + user.uid),{
+              last_login: dt
             })
             // ...
+            alert('User logged in')
           })
           .catch((error) => {
             const errorCode = error.code;
