@@ -1,84 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="assets/css/login.css">
-    
-        <!-- ===== BOX ICONS ===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/login.css" />
 
-        <title>Quiz Master</title>
-    </head>
-    <body>
-        <div class="login">
-            <div class="login__content">
-                <div class="login__img">
-                    <img src="assets/img/login.svg" alt="">
-                </div>
+    <!-- ===== BOX ICONS ===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-                <div class="login__forms">
-                    <form action="" class="login__registre" id="login-in">
-                        <h1 class="login__title">Sign In</h1>
-    
-                        <div class="login__box">
-                            <i class='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" class="login__input">
-                        </div>
-    
-                        <div class="login__box">
-                            <i class='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input">
-                        </div>
-
-                        <a href="#" class="login__forgot">Forgot password?</a>
-
-                        <a href="#" class="login__button">Sign In</a>
-
-                        <div>
-                            <span class="login__account">Don't have an Account ?</span>
-                            <span class="login__signin" id="sign-up">Sign Up</span>
-                            <a href="index.html"><span class="home_link">Go Home</span></a>
-                        </div>
-                    </form>
-
-                    <form action="" class="login__create none" id="login-up">
-                        <h1 class="login__title">Create Account</h1>
-    
-                        <div class="login__box">
-                            <i class='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" class="login__input">
-                        </div>
-    
-                        <div class="login__box">
-                            <i class='bx bx-at login__icon'></i>
-                            <input type="text" placeholder="Email" class="login__input">
-                        </div>
-
-                        <div class="login__box">
-                            <i class='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input">
-                        </div>
-
-                        <a href="#" class="login__button">Sign Up</a>
-
-                        <div>
-                            <span class="login__account">Already have an Account ?</span>
-                            <span class="login__signup" id="sign-in">Sign In</span>
-                        </div>
-
-                        <div class="login__social">
-                            <a href="#" class="login__social-icon"><i class='bx bxl-facebook' ></i></a>
-                            <a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
-                            <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <title>Quiz Master</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="login__content">
+        <div class="login__img">
+          <img src="assets/img/login.svg" alt="" />
         </div>
 
-        <script src="assets/js/login.js"></script>t
-    </body>
+        <div class="login__forms">
+          <form class="login__registre" id="login-in">
+            <h1 class="login__title">Sign In</h1>
+
+            <div class="login__box">
+              <i class="bx bx-user login__icon"></i>
+              <input
+                type="text"
+                placeholder="Username"
+                class="login__input"
+                id="username"
+              />
+            </div>
+
+            <div class="login__box">
+              <i class="bx bx-lock-alt login__icon"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                class="login__input"
+                id="password"
+              />
+            </div>
+
+            <a href="#" class="login__forgot">Forgot password?</a>
+
+            <input type="submit" value="Sign In" class="login__button" />
+
+            <div>
+              <span class="login__account">Don't have an Account ?</span>
+              <span class="login__signin" id="sign-up">Sign Up</span>
+              <a href="index.html"><span class="home_link">Go Home</span></a>
+            </div>
+          </form>
+
+          <form class="login__create none" id="login-up">
+            <h1 class="login__title">Create Account</h1>
+
+            <div class="login__box">
+              <i class="bx bx-user login__icon"></i>
+              <input
+                type="text"
+                placeholder="Username"
+                class="login__input"
+                id="usernameUp"
+              />
+            </div>
+
+            <div class="login__box">
+              <i class="bx bx-at login__icon"></i>
+              <input
+                type="text"
+                placeholder="Email"
+                class="login__input"
+                id="email"
+              />
+            </div>
+
+            <div class="login__box">
+              <i class="bx bx-lock-alt login__icon"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                class="login__input"
+                id="passwordUp"
+              />
+            </div>
+
+            <input type="submit" value="Sign Up" class="login__button" />
+
+            <div>
+              <span class="login__account">Already have an Account ?</span>
+              <span class="login__signup" id="sign-in">Sign In</span>
+            </div>
+
+            <div class="login__social">
+              <a href="#" class="login__social-icon"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a href="#" class="login__social-icon"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="#" class="login__social-icon"
+                ><i class="bx bxl-google"></i
+              ></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword
+      } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+      import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBEtXZZxlOmc5DhUGahSB1ENDr4HIf7jIM",
+        authDomain: "localhost",
+        databaseURL: "https://lasuauth-default-rtdb.firebaseio.com",
+        projectId: "lasuauth",
+        storageBucket: "lasuauth.appspot.com",
+        messagingSenderId: "694095833984",
+        appId: "1:694095833984:web:9301bfa8da34511453af65",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth();
+      const database = getDatabase(app);
+
+      let form = document.getElementById("login-up");
+
+      let login = document.getElementById("login-in")
+      
+
+
+
+      // form.addEventListener("submit", (e) => {
+      //   e.preventDefault();
+      //   let email = document.getElementById("email").value;
+      //   let password = document.getElementById("passwordUp").value;
+      //   let username = document.getElementById("usernameUp").value;
+
+
+      //   createUserWithEmailAndPassword(auth, email, password)
+      //     .then((userCredential) => {
+      //       // Signed in
+      //       const user = userCredential.user;
+
+      //       let dt = new Date();
+
+      //       set(ref(database, 'users/' + user.uid),{
+      //           email: email,
+      //         username: username,
+      //         last_login: dt
+      //       })
+      //       // ...
+      //       alert('User signed in')
+      //     })
+      //     .catch((error) => {
+      //       const errorCode = error.code;
+      //       const errorMessage = error.message;
+      //       // ..
+      //       alert(errorMessage);
+      //     });
+
+      // });
+
+      login.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let password = document.getElementById("password").value;
+        let email = document.getElementById("username").value;
+
+
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+
+            let dt = new Date()
+            update(ref(database, 'users/' + user.uid),{
+              last_login: dt
+            })
+            // ...
+            alert('User logged in')
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+            alert(errorMessage);
+          });
+
+      });
+
+      function register() {
+        // if (
+        //   validateEmail(email) == false ||
+        //   validatePassword(password) == false
+        // ) {
+        //   alert("Check your Email or Password");
+        //   return;
+        // }
+
+        // if (validateFeild(username) == false) {
+        //   alert("Username cannot be empty ");
+        // }
+
+       
+      }
+
+      function validateEmail(email) {
+        let expression = /^[^@]+@\w+(\.\w+)+\w$/;
+        if (expression.test(email) == true) {
+          return true;
+          console.log(true);
+        } else {
+          return false;
+          console.log(false);
+        }
+      }
+
+      function validatePassword(password) {
+        if (password.length < 7) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function validateFeild(feild) {
+        if (feild == null) {
+          return false;
+        }
+
+        if (feild.length <= 0) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </body>
 </html>
