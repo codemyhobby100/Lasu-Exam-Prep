@@ -23,7 +23,7 @@
         </div>
 
         <div class="login__forms">
-          <form class="login__registre" id="login-in">
+          <form class="login__registre" id="login-in" action="./index.html">
             <h1 class="login__title">Sign In</h1>
 
             <div class="login__box">
@@ -150,36 +150,36 @@
 
 
 
-      // form.addEventListener("submit", (e) => {
-      //   e.preventDefault();
-      //   let email = document.getElementById("email").value;
-      //   let password = document.getElementById("passwordUp").value;
-      //   let username = document.getElementById("usernameUp").value;
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("passwordUp").value;
+        let username = document.getElementById("usernameUp").value;
 
 
-      //   createUserWithEmailAndPassword(auth, email, password)
-      //     .then((userCredential) => {
-      //       // Signed in
-      //       const user = userCredential.user;
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
 
-      //       let dt = new Date();
+            let dt = new Date();
 
-      //       set(ref(database, 'users/' + user.uid),{
-      //           email: email,
-      //         username: username,
-      //         last_login: dt
-      //       })
-      //       // ...
-      //       alert('User signed in')
-      //     })
-      //     .catch((error) => {
-      //       const errorCode = error.code;
-      //       const errorMessage = error.message;
-      //       // ..
-      //       alert(errorMessage);
-      //     });
+            set(ref(database, 'users/' + user.uid),{
+                email: email,
+              username: username,
+              last_login: dt
+            })
+            // ...
+            alert('User signed in')
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+            alert(errorMessage);
+          });
 
-      // });
+      });
 
       login.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -198,6 +198,8 @@
             })
             // ...
             alert('User logged in')
+            window.location.href="./index.html";
+
           })
           .catch((error) => {
             const errorCode = error.code;
