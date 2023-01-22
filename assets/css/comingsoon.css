@@ -139,10 +139,11 @@ img {
   
   /*=============== NAV ===============*/
   .nav {
-    height: var(--header-height);
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
   }
   
   @media screen and (max-width: 767px) {
