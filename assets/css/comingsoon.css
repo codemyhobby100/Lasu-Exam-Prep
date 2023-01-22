@@ -139,6 +139,7 @@ img {
   
   /*=============== NAV ===============*/
   .nav {
+    
     height: 4rem;
     display: flex;
     justify-content: space-between;
@@ -149,7 +150,7 @@ img {
   @media screen and (max-width: 767px) {
     .nav__menu {
       position: fixed;
-      background-color: var(--container-color);
+      background-color: hsl(var(--hue), 8%, 13%);
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
       padding: 2.5rem 0;
       width: 90%;
