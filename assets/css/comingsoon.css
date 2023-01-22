@@ -7,10 +7,11 @@
   --hue: 230;
   --sat: 70%;
   --first-color: hsl(var(--hue), var(--sat), 60%);
-  --first-color-light: hsl(var(--hue), var(--sat), 85%);
+  --first-color-light: (var(--hue), var(--sat), 75%);
+  /* hsl(var(--hue), var(--sat), 75% */
   --first-color-lighten: hsl(var(--hue), var(--sat), 80%);
   --first-color-alt: hsl(var(--hue), var(--sat), 53%);
-  --title-color: hsl(var(--hue), 4%, 15%);
+  --title-color: hsl(var(--hue), 4%, 95%);
   --text-color: hsl(var(--hue), 4%, 35%);
   --text-color-light: hsl(var(--hue), 4%, 65%);
   --container-color: hsl(var(--hue), 8%, 16%);
@@ -65,7 +66,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: hsl(var(--hue), 8%, 13%);
   color: var(--text-color);
   transition: .5s;
 }
@@ -91,7 +92,7 @@ img {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
-body.dark-theme {
+/* body.dark-theme {
   --first-color-light: hsl(var(--hue), var(--sat), 75%);
   --title-color: hsl(var(--hue), 4%, 95%);
   --text-color: hsl(var(--hue), 4%, 80%);
@@ -99,7 +100,7 @@ body.dark-theme {
   --container-color: hsl(var(--hue), 8%, 16%);
   --scroll-bar-color: hsl(var(--hue), 4%, 32%);
   --scroll-thumb-color: hsl(var(--hue), 4%, 24%);
-}
+} */
 
 /*========== Button Dark/Light ==========*/
 .change-theme {
@@ -274,6 +275,11 @@ body.dark-theme {
 .home__title {
   font-size: var(--biggest-font-size);
   margin: .75rem 0;
+}
+
+.home__subtitle,
+.home__description{
+  color: var(--text-color-light);
 }
 
 
