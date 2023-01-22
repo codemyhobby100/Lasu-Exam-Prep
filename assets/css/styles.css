@@ -287,6 +287,7 @@ body.dark-theme {
   font-size: 1.5rem;
 }
 
+
 /*=============== ABOUT ===============*/
 .about__container {
   gap: 2.5rem;
@@ -296,6 +297,9 @@ body.dark-theme {
   text-align: center;
 }
 
+.about_buttons{
+  margin-top: 15px;
+}
 /*=============== SECURITY ===============*/
 .security__container {
   gap: 2.5rem;
@@ -731,6 +735,17 @@ body.dark-theme {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-color-light);
+}
+
+.button_round{
+  background: none;
+}
+
+.button_round i{
+  font-size: 40px;
+  margin-top: -5px;
+  color: var(--first-color);
+  display: none;
 }
 
 /*=============== MEDIA QUERIES ===============*/
